@@ -1,0 +1,10 @@
+@mixin clearfix {
+    &::after {
+        content: "";        // creates the pseudo element that we do not want to see
+        display: table;     // default display for clearing floats
+        clear: both;        //float left and right
+    }
+
+}
+
+//appends a pseudo element after the element which will then clear the floats
