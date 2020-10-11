@@ -1,5 +1,9 @@
 .form {
 
+    @include respond(tab-port){
+        width: 80%;
+    }
+
     &__group:not(:last-child) {
         margin-bottom: 2rem;
     }
@@ -16,6 +20,10 @@
         width: 90%;
         display: block;
         transition: all .3s;
+
+        @include respond(tab-port){
+            width: 100%;
+        }
 
         &:focus {
             outline: none;
@@ -50,6 +58,11 @@
      &__radio-group {
         width: 45%;
         display: inline-block;
+
+        @include respond(tab-port){
+            width: 100%;
+            margin-bottom: 2rem;
+        }
      }
 
      &__radio-input {
